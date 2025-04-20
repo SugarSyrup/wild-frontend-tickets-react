@@ -90,4 +90,48 @@ describe("reducer", () => {
       ]);
     });
   });
+
+  describe("deleteComment", () => {
+    it("deletes a comment", () => {
+      const prevTickets: Ticket[] = [
+        {
+          id: 1,
+          title: "TITLE",
+          description: "DESCRIPTION",
+          status: "open",
+          comments: [
+            {
+              id: 1,
+              content: "COMMENT",
+            },
+            {
+              id: 2,
+              content: "COMMENT2",
+            },
+          ],
+        },
+      ];
+
+      const newTickets = reducer(prevTickets, {
+        type: "deleteComment",
+        ticketId: 1,
+        commentId: 2,
+      });
+
+      expect(newTickets).toEqual([
+        {
+          id: 1,
+          title: "TITLE",
+          description: "DESCRIPTION",
+          status: "open",
+          comments: [
+            {
+              id: 1,
+              content: "COMMENT",
+            },
+          ],
+        },
+      ]);
+    });
+  });
 });

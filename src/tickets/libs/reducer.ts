@@ -53,5 +53,18 @@ export function reducer(tickets: Ticket[], action: TicketAction): Ticket[] {
 
       return results;
     }
+
+    case "deleteComment": {
+      return tickets.map((ticket) =>
+        ticket.id === action.ticketId
+          ? {
+              ...ticket,
+              comments: ticket.comments.filter(
+                (comment) => comment.id !== action.commentId
+              ),
+            }
+          : ticket
+      );
+    }
   }
 }

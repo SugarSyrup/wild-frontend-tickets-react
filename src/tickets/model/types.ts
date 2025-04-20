@@ -29,6 +29,20 @@ export interface TicketActions {
     ticketId: number;
     content: string;
   }): void;
+
+  deleteComment({
+    ticketId,
+    commentId,
+  }: {
+    ticketId: number;
+    commentId: number;
+  }): void;
+}
+
+export interface DeleteCommentAction {
+  type: "deleteComment";
+  ticketId: number;
+  commentId: number;
 }
 
 export interface AddTicketAction {
@@ -51,6 +65,7 @@ interface AddCommentAction {
 export type TicketAction =
   | AddTicketAction
   | ToggleTicketStatusAction
-  | AddCommentAction;
+  | AddCommentAction
+  | DeleteCommentAction;
 
 export type Dispatch = (action: TicketAction) => void;

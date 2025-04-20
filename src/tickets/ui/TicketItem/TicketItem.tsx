@@ -23,7 +23,11 @@ export default function TicketItem({
 
       <CommentForm ticketId={ticket.id} dispatch={dispatch} />
       <li>
-        <CommentList comments={ticket.comments} />
+        <CommentList
+          comments={ticket.comments}
+          ticketId={ticket.id}
+          dispatch={dispatch}
+        />
       </li>
     </li>
   );
