@@ -1,4 +1,4 @@
-import { Ticket, TicketAction } from "./types";
+import { Ticket, TicketAction } from "../model/types";
 
 export function reducer(tickets: Ticket[], action: TicketAction): Ticket[] {
   switch (action.type) {

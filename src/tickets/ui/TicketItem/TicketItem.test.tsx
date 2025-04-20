@@ -2,7 +2,7 @@ import { beforeEach, describe, expect, it, vi } from "vitest";
 
 import { fireEvent, render, screen } from "@testing-library/react";
 
-import { Ticket } from "./types";
+import { Ticket } from "../../model/types";
 import TicketItem from "./TicketItem";
 
 const context = describe;

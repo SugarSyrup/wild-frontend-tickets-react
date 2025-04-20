@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 
 import { reducer } from "./reducer";
 
-import { Ticket } from "./types";
+import { Ticket } from "../model/types";
 
 describe("reducer", () => {
   describe("addTicket", () => {

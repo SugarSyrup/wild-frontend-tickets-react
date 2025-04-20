@@ -1,6 +1,6 @@
 import { memo } from "react";
-import TicketItem from "./TicketItem";
-import { Ticket, Dispatch } from "./types";
+import TicketItem from "../TicketItem/TicketItem";
+import { Ticket, Dispatch } from "../../model/types";
 
 const TicketItemMemo = memo(TicketItem);
 

@@ -1,8 +1,8 @@
 import { FormEvent } from "react";
-import { Dispatch } from "./types";
-import TextField from "../common/TextField";
-import TextArea from "../common/TextArea";
-import SubmitButton from "../common/SubmitButton";
+import { Dispatch } from "../../model/types";
+import TextField from "../../../common/TextField";
+import TextArea from "../../../common/TextArea";
+import SubmitButton from "../../../common/SubmitButton";
 
 export default function TicketForm({ dispatch }: { dispatch: Dispatch }) {
   const handleSubmit = (event: FormEvent) => {

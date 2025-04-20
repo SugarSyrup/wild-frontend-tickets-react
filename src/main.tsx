@@ -1,7 +1,7 @@
-import TicketForm from "./tickets/TicketForm";
-import TicketList from "./tickets/TicketList";
+import TicketForm from "./tickets/ui/TicketForm/TicketForm";
+import TicketList from "./tickets/ui/TicketList/TicketList";
 import { useReducer } from "react";
-import { reducer } from "./tickets/reducer";
+import { reducer } from "./tickets/libs/reducer";
 
 export default function Main() {
   const [tickets, dispatch] = useReducer(reducer, []);

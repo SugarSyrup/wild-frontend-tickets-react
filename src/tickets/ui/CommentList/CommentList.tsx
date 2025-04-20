@@ -1,4 +1,4 @@
-import { Comment } from "./types";
+import { Comment } from "../../model/types";
 
 export default function CommentList({ comments }: { comments: Comment[] }) {
   return (

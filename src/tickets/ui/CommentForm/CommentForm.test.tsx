@@ -1,9 +1,7 @@
 import { render, screen, fireEvent } from "@testing-library/react";
-import { Ticket } from "./types";
-import { Dispatch } from "./types";
-import CommentForm from "./CommentForm";
+import { Ticket } from "../../model/types";
 import { vi } from "vitest";
-import TicketItem from "./TicketItem";
+import CommentForm from "./CommentForm";
 
 const context = describe;
 
@@ -22,13 +20,9 @@ describe("CommentForm describe", () => {
     vi.resetAllMocks();
   });
 
-  function renderTicketItem() {
-    render(<TicketItem ticket={ticket} dispatch={dispatch} />);
-  }
-
   context("when user submits comment", () => {
     it("calls dispatch function", () => {
-      renderTicketItem();
+      render(<CommentForm ticketId={ticket.id} dispatch={dispatch} />);
 
       fireEvent.change(screen.getByRole("textbox", { name: /Comment/ }), {
         target: { value: "New Comment" },

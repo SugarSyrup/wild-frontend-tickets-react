@@ -1,6 +1,6 @@
-import CommentForm from "./CommentForm";
-import CommentList from "./CommentList";
-import { Ticket, Dispatch } from "./types";
+import CommentForm from "../CommentForm/CommentForm";
+import CommentList from "../CommentList/CommentList";
+import { Ticket, Dispatch } from "../../model/types";
 
 export default function TicketItem({
   ticket,

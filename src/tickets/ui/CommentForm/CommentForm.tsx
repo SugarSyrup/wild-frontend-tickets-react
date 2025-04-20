@@ -1,7 +1,7 @@
-import { Dispatch } from "./types";
+import { Dispatch } from "../../model/types";
 import { FormEvent } from "react";
-import TextField from "../common/TextField";
-import SubmitButton from "../common/SubmitButton";
+import TextField from "../../../common/TextField";
+import SubmitButton from "../../../common/SubmitButton";
 
 export default function CommentForm({
   ticketId,
